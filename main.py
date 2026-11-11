@@ -1,5 +1,5 @@
 import json,os,urllib.request as U
-E=os.getenv('MAKEFUN_ENV_URL');V=[0,100,320,330,500,900,0];M=99999
+E=os.getenv('MAKEFUN_ENV_URL');V=[0,100,320,345,500,920,0];M=99999
 KN=(-33,-31,-18,-14,14,18,31,33);DG=(-17,-15,15,17);ST=(-16,16,-1,1);AL=DG+ST
 B=[0]*128;T=1;C=0;EP=-1;N=[0]
 def VD(t):return -1<t<128 and not t&136
@@ -32,7 +32,7 @@ def A(s,by):
 def PS(a,i,sg):
  x=i&7;r=7-(i>>4)if sg>0 else i>>4;cx=abs(2*x-7);cy=abs(2*r-7)
  if a==1:return(r-1)*6
- if a==2:return 16-2*cx-cy
+ if a==2:return 22-3*cx-cy
  if a==6:return(14-2*cx-2*cy)if EG else cx*2-r*4
  return 0
 def EV():
@@ -100,7 +100,7 @@ def O(m):
  f=m&127;t=(m>>7)&127;v=B[t];return(10*V[abs(v)]-V[abs(B[f])]//10 if v else 0)+V[m>>14]
 def S(d,a,b,ply):
  N[0]+=1
- if N[0]>15000:1/0
+ if N[0]>30000:1/0
  chk=A(B.index(6*T),-T)
  if d<=0 and not chk:
   e=EV()
